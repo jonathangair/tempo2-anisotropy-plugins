@@ -41,7 +41,7 @@
  */
 
 #include "T2toolkit.h"
-#include "Gwsim.h"
+#include "GWsim.h"
 
 /* Have a structure to define a gravitational wave source */
 typedef struct gwgeneralSrc

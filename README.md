@@ -4,41 +4,38 @@ tempo2-anisotropy-plugins
 
 Plugins for Tempo2 to generate anisotropic GW backgrounds with arbitrary polarisation.
 
-#####################
 REQUIREMENTS
-#####################
+-------------
 
 You will require a working installation of Tempo2 before installing this software.
 
-#####################
 INSTALLATION
-#####################
+-------------
 
 Unpack GWAnisoPluginTarball.tar.gz in the main tempo2 directory,
 
->> gtar xzf GWAnisoPluginTarball.tar.gz
+`gtar xzf GWAnisoPluginTarball.tar.gz`
 
 This compressed tar comes with modified plugin Makefiles. Make sure you are still in the main Tempo2 directory. Running,
 
->> make plugins
->> make plugins install
+     make plugins
+     make plugins install
 
 should be sufficient, however if the anisotropy plugins were not made then run,
 
->> make
->> make install
->> make plugins
->> make plugins install
+     make
+     make install
+     make plugins
+     make plugins install
 
-If you still have problems, then install Tempo2 from scratch by executing ./configure before the first 'make' command.
+If you still have problems, then install Tempo2 from scratch by executing `./configure` before the first `make` command.
 
-####################
 THE PLUGINS
-####################
+------------
 
 There are 6 different plugins included in this repository, which generate GW backgrounds of different types, as described in the following.
 
-(1) GWbkgrd_plug.C
+### GWbkgrd_plug.C ###
 
 This is the usual GWbkgrd plugin that comes packaged with a Tempo2 download. The user can inject an isotropic stochastic gravitational-wave background signal into model TOAs by specifying the amplitude and slope of the characteristic strain-spectrum of the background.
 
@@ -46,9 +43,9 @@ The polarisation of the GWs is the usual general relativistic transverse tracles
 
 Example usage:
 
->> ./tempo2 -gr GWbkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -ngw 10000 -plot
+     ./tempo2 -gr GWbkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -ngw 10000 -plot
 
-(2) GWbkgrdfromfile_plug.C
+### GWbkgrdfromfile_plug.C ###
 
 This plugin allows the user to simulate a gravitational wave background comprised of a set of sources listed in an input file.
 
@@ -60,9 +57,9 @@ Notable command-line options are,
 
 Example usage:
 
->> ./tempo2 -gr GWbkgrdfromfile -f psr.par psr.tim -dist 1 -plot -GRBkgrdFile BkrdFileGR.bin
+     ./tempo2 -gr GWbkgrdfromfile -f psr.par psr.tim -dist 1 -plot -GRBkgrdFile BkrdFileGR.bin
 
-(3) GWdipolebkgrd_plug.C
+### GWdipolebkgrd_plug.C ###
 
 This plugin allows the user to simulate a gravitational wave background with a dipole anisotropy in a user-specified direction.
 
@@ -76,9 +73,9 @@ Notable command-line options are,
 
 Example usage:
 
->> ./tempo2 -gr GWdipolebkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -dipolemag 1. -dipoledir 0. 0. -ngw 10000 -plot
+     ./tempo2 -gr GWdipolebkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -dipolemag 1. -dipoledir 0. 0. -ngw 10000 -plot
 
-(4) GWgeneralbkgrd_plug.C
+### GWgeneralbkgrd_plug.C ###
 
 This plugin allows the user to simulate an isotropic gravitational wave background comprised of arbitrary polarization states.
 
@@ -97,9 +94,9 @@ Notable command-line options are,
 
 Example usage:
 
->> ./tempo2 -gr GWgeneralbkgrd -f psr.par psr.tim -dist 1 -gwampTT 1e-15 -alphaTT -0.666666 -gwampST 1e-15 -alphaST -0.666666 -gwampSL 1e-15 -alphaSL -0.666666 -gwampVL 1e-15 -alphaVL -0.666666 -ngw 1000 -plot
+     ./tempo2 -gr GWgeneralbkgrd -f psr.par psr.tim -dist 1 -gwampTT 1e-15 -alphaTT -0.666666 -gwampST 1e-15 -alphaST -0.666666 -gwampSL 1e-15 -alphaSL -0.666666 -gwampVL 1e-15 -alphaVL -0.666666 -ngw 1000 -plot
 
-(5) GWanisobkgrd_plug.C
+### GWanisobkgrd_plug.C ###
 
 This plugin allows the user to simulate an anisotropic gravitational wave background with the usual GR polarisation states.
 
@@ -111,9 +108,9 @@ Notable command-line options are,
 
 Example usage:
 
->> ./tempo2 -gr GWanisobkgrd -f tt.par 0437.2048.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -harmfile BkgrdHarmonics -ngw 1000 -plot
+     ./tempo2 -gr GWanisobkgrd -f tt.par 0437.2048.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -harmfile BkgrdHarmonics -ngw 1000 -plot
 
-(6) GWgeneralanisobkgrd_plug.C
+### GWgeneralanisobkgrd_plug.C ###
 
 This plugin allows the user to simulate an anisotropic gravitational wave background composed of arbitrary polarisation states.
 
@@ -136,4 +133,4 @@ Notable command-line options are,
 
 Example usage: 
 
->> ./tempo2 -gr GWgeneralanisobkgrd -f psr.par psr.tim -dist 1 -gwampTT 1e-15 -alphaTT -0.666666 -harmfileTT TTBkgrdHarmonics -gwampST 1e-15 -alphaST -0.666666 -harmfileST STBkgrdHarmonics -gwampSL 1e-15 -alphaSL -0.666666 -harmfileSL SLBkgrdHarmonics -gwampVL 1e-15 -alphaVL -0.66666 -harmfileVL VLBkgrdHarmonics -ngw 1000 -plot
+     ./tempo2 -gr GWgeneralanisobkgrd -f psr.par psr.tim -dist 1 -gwampTT 1e-15 -alphaTT -0.666666 -harmfileTT TTBkgrdHarmonics -gwampST 1e-15 -alphaST -0.666666 -harmfileST STBkgrdHarmonics -gwampSL 1e-15 -alphaSL -0.666666 -harmfileSL SLBkgrdHarmonics -gwampVL 1e-15 -alphaVL -0.66666 -harmfileVL VLBkgrdHarmonics -ngw 1000 -plot

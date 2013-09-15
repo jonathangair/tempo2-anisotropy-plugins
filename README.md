@@ -134,3 +134,7 @@ Notable command-line options are,
 Example usage: 
 
      ./tempo2 -gr GWgeneralanisobkgrd -f psr.par psr.tim -dist 1 -gwampTT 1e-15 -alphaTT -0.666666 -harmfileTT TTBkgrdHarmonics -gwampST 1e-15 -alphaST -0.666666 -harmfileST STBkgrdHarmonics -gwampSL 1e-15 -alphaSL -0.666666 -harmfileSL SLBkgrdHarmonics -gwampVL 1e-15 -alphaVL -0.66666 -harmfileVL VLBkgrdHarmonics -ngw 1000 -plot
+
+## Example ##
+
+A sample "harmfile" and pre-injection TOAs are supplied in the `example` directory. Further information can be found there in the DEMO.md file.

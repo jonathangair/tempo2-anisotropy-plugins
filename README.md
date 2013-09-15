@@ -108,7 +108,7 @@ Notable command-line options are,
 
 Example usage:
 
-     ./tempo2 -gr GWanisobkgrd -f tt.par 0437.2048.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -harmfile BkgrdHarmonics -ngw 1000 -plot
+     ./tempo2 -gr GWanisobkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -harmfile BkgrdHarmonics -ngw 1000 -plot
 
 ### GWgeneralanisobkgrd_plug.C ###
 

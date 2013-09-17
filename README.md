@@ -2,7 +2,9 @@
 tempo2-anisotropy-plugins
 =========================
 
-Plugins for Tempo2 to generate anisotropic GW backgrounds with arbitrary polarisation.
+Plugins for Tempo2 (*Hobbs, Edwards & Manchester (2006) MNRAS, Vol 369, Issue 2, pp. 655-672*) to generate anisotropic GW backgrounds with arbitrary polarisation.
+
+**These plugins and header files are based on GWbkgrd_plug.C and GWsim.h respectively, which were developed by G. Hobbs and D. Yardley with help from F. Jenet and K. J. Lee. The routines used in the original GWbkgrd_plug.C and GWsim.h are described in Hobbs, Jenet, Verbiest, Yardley, Manchester, Lommen, Coles, Edwards & Shettigara (2009) MNRAS: "TEMPO2, a new pulsar timing package. III: Gravitational wave simulation".**
 
 REQUIREMENTS
 -------------
@@ -33,17 +35,7 @@ If you still have problems, then install Tempo2 from scratch by executing `./con
 THE PLUGINS
 ------------
 
-There are 6 different plugins included in this repository, which generate GW backgrounds of different types, as described in the following.
-
-### GWbkgrd_plug.C ###
-
-This is the usual GWbkgrd plugin that comes packaged with a Tempo2 download. The user can inject an isotropic stochastic gravitational-wave background signal into model TOAs by specifying the amplitude and slope of the characteristic strain-spectrum of the background.
-
-The polarisation of the GWs is the usual general relativistic transverse tracless modes.
-
-Example usage:
-
-     ./tempo2 -gr GWbkgrd -f psr.par psr.tim -dist 1 -gwamp 1e-15 -alpha -0.666666 -ngw 10000 -plot
+There are 5 different plugins included in this repository, which generate GW backgrounds of different types, as described in the following.
 
 ### GWbkgrdfromfile_plug.C ###
 

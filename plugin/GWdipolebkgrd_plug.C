@@ -54,7 +54,7 @@ void help() /* Display help */
   printf("-alpha GW spectral exponent (usually -0.666) \n");
   printf("-clock simulate clock errors instead of a GWB\n");
   printf("-dist  pulsar distance in kpc\n");
-  printf("-dipoleamp a b c: dipole amplitudes for Y_1^1 (Y_1^1+Y_1^-1) and (Y_1^1-Y_1^-1) respectively. Note magnitude a^2+b^2+c^2 must be less than 1.\n");
+  printf("-dipoleamps a b c: dipole amplitudes for Y_1^1 (Y_1^1+Y_1^-1) and (Y_1^1-Y_1^-1) respectively. Note magnitude a^2+b^2+c^2 must be less than 1.\n");
   printf("-dipoledir theta phi: direction of dipole in spherical coordinates.\n");
   printf("-dipolemag  magnitude of dipole relative to isotropic component - must be between 0 and 1.\n");
   printf("-f     parfile.par timfile.tim:  input par and tim files\n");

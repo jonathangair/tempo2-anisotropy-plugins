@@ -57,7 +57,7 @@ This plugin allows the user to simulate a gravitational wave background with a d
 
 Notable command-line options are,
 
-- "dipoleamp a b c" : where a,b,c are the dipole amplitudes for the spherical-harmonic functions Y_1^1 (Y_1^1+Y_1^-1) and (Y_1^1-Y_1^-1) respectively. Note that the magnitude a^2+b^2+c^2 must be less than 1.
+- "dipoleamps a b c" : where a,b,c are the dipole amplitudes for the spherical-harmonic functions Y_1^1 (Y_1^1+Y_1^-1) and (Y_1^1-Y_1^-1) respectively. Note that the magnitude a^2+b^2+c^2 must be less than 1.
 - "dipoledir theta phi" : to specify the direction of the dipole anisotropy in spherical coordinates.
 - "dipolemag" : specifies the magnitude of the dipole relative to the isotropic component - must be between 0 and 1.
 - "writebkgrd bkgrdfile.dat" : write the parameters of the sources constituting the generated background out to the file 'bkgrdfile.dat'.
@@ -94,7 +94,7 @@ This plugin allows the user to simulate an anisotropic gravitational wave backgr
 
 Notable command-line options are,
 
-- "harmfile" : input file containing a list of harmonics - l m amp - to include in background.
+- "harmfile" : input file containing a list of harmonics - l m amp - to include in background. *First line must be an integer denoting number of harmonics, **NOT** maximum `l`. Must always include monopole component.*
 - "writebkgrd bkgrdfile.dat" : write the parameters of the sources constituting the generated background out to the file 'bkgrdfile.dat'.
 - "writebkgrdid I" : if specified, uses integer I to identify the background realisation in the output file. Default is 0 if unspecified.
 

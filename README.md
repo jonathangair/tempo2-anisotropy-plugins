@@ -94,7 +94,7 @@ This plugin allows the user to simulate an anisotropic gravitational wave backgr
 
 Notable command-line options are,
 
-- "harmfile" : input file containing a list of harmonics - l m amp - to include in background. *First line must be an integer denoting number of harmonics, **NOT** maximum `l`. Must always include monopole component.*
+- "harmfile" : input file containing a list of harmonics - l m amp - to include in background. **First line must be an integer denoting number of harmonics, NOT maximum `l`. Must always include monopole component.**
 - "writebkgrd bkgrdfile.dat" : write the parameters of the sources constituting the generated background out to the file 'bkgrdfile.dat'.
 - "writebkgrdid I" : if specified, uses integer I to identify the background realisation in the output file. Default is 0 if unspecified.
 

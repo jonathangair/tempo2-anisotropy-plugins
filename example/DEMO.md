@@ -13,7 +13,7 @@ The following block can be copied directly to a file and used as input to the GW
 ```
 2
 0 0 1.0
-2 0 0 0.8944272
+2 0 0.8944272
 ```
 
 **Note that the first line is a list of the number of harmonics, NOT the maximum `l`. One must always include the monopole component.**
